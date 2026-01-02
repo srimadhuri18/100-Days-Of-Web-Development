@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Projects - 100 Days of Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | 100 Days of Code</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <nav>
-        <div class="logo">Shubham-cyber-prog 🚀</div>
+    <nav class="navbar">
+        <div class="logo">DevChallenge 🚀</div>
         <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
             <li><a href="projects.html" class="active">Projects</a></li>
@@ -16,13 +22,30 @@
         </ul>
     </nav>
 
+    <header class="projects-header">
+        <h1>Explore 100 Days of Code</h1>
+        <p>From Beginner to Master. Build your portfolio one day at a time.</p>
+    </header>
+
     <main class="container">
-        <h2>📂 All Projects</h2>
-        <div class="filter-controls">
-            </div>
+        <div class="filters">
+            <button class="tab-btn active" data-category="All">All Projects</button>
+            <button class="tab-btn" data-category="Beginner">Beginner</button>
+            <button class="tab-btn" data-category="Intermediate">Intermediate</button>
+            <button class="tab-btn" data-category="Advanced">Advanced</button>
+            <button class="tab-btn" data-category="Capstone">Capstone</button>
+        </div>
+
         <div id="projects-grid" class="projects-grid">
-            </div>
+            <!-- Projects injected via script.js -->
+        </div>
     </main>
+
+    <footer>
+        <p>Maintained by the Shubham-cyber-prog</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>
