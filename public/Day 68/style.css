@@ -28,5 +28,6 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: #2d343b;
+  background: transparent;
 }
+
