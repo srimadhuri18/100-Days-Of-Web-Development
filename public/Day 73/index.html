@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>ML Path</title>
 
-  <!-- GLOBAL STYLES -->
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/chatbot.css" />
@@ -12,10 +11,8 @@
 
 <body>
 
-  <!-- ================= HEADER ================= -->
   <div id="header"></div>
 
-  <!-- ================= HERO SECTION ================= -->
   <section class="hero">
     <canvas id="heroCanvas"></canvas>
 
@@ -26,11 +23,9 @@
     </div>
   </section>
 
-  <!-- ================= CHAPTER SECTION ================= -->
   <section class="chapter-section">
     <canvas id="staticCanvas"></canvas>
 
-    <!-- TOP NAV -->
     <div class="chapter-nav" id="chapterNav">
       <button>Probability</button>
       <button>Clustering</button>
@@ -55,23 +50,17 @@
     <button class="chapter-arrow right">›</button>
   </section>
 
-  <!-- ================= FOOTER ================= -->
   <div id="footer"></div>
 
-  <!-- ================================================= -->
-  <!-- 🔥 CHATBOT CONTAINER (MUST BE HERE – END OF BODY) -->
-  <!-- ================================================= -->
+
   <div id="chatbot-container"></div>
 
-  <!-- ================= COMPONENT SCRIPTS ================= -->
   <script src="components/header.js"></script>
   <script src="components/footer.js"></script>
 
-  <!-- ================= BACKGROUND CANVAS ================= -->
   <script src="js/home-circles.js"></script>
   <script src="js/static-circles.js"></script>
 
-  <!-- ================= PAGE LOGIC ================= -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const topics = [
@@ -157,7 +146,6 @@
     });
   </script>
 
-  <!-- ================= CHATBOT LOADER (LAST) ================= -->
   <script>
     fetch("components/chatbot.html")
       .then(res => res.text())

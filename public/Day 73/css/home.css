@@ -18,7 +18,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;          /* behind everything */
+  z-index: 0;          
   pointer-events: none;
 }
 
@@ -50,10 +50,9 @@ body {
   overflow-x: hidden;
 }
 
-/* TOPICS SECTION */
 .topics {
   padding: 80px 60px;
-  background: transparent; /* no white */
+  background: transparent; 
 }
 .topics h2 {
   font-size: 32px;
@@ -76,7 +75,6 @@ body {
   transform: translateY(-4px);
 }
 
-/* Scroll buttons */
 .scroll-btn {
   color: #ffffff;
 }
@@ -93,14 +91,12 @@ body {
   text-align: center;
   padding: 50px 20px;
 }
-/* ===== CHAPTER SECTION ===== */
 
 .chapter-section {
   position: relative;
   padding: 80px 80px 120px;
 }
 
-/* Top navigation */
 .chapter-nav {
   display: flex;
   gap: 28px;
@@ -118,14 +114,12 @@ body {
   font-weight: 600;
 }
 
-/* Main split layout */
 .chapter-content {
   display: flex;
   gap: 80px;
   align-items: center;
 }
 
-/* LEFT */
 .chapter-left {
   width: 40%;
 }
@@ -156,7 +150,6 @@ body {
   font-weight: 600;
 }
 
-/* RIGHT */
 .chapter-right {
   width: 60%;
   display: flex;
@@ -164,7 +157,6 @@ body {
   gap: 24px;
 }
 
-/* Topic cards */
 .topic-card-large {
   background: #ffffff;
   color: #000;
@@ -184,13 +176,12 @@ body {
   transform: translateY(-4px);
 }
 
-/* Icon circle */
-/* ===== ICON CIRCLE (IMAGE FIT FIX) ===== */
+
 .icon-circle {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  overflow: hidden;       /* REQUIRED */
+  overflow: hidden;       
   flex-shrink: 0;
 
   background: linear-gradient(135deg, #ff5ea0, #6c8cff);
@@ -200,17 +191,15 @@ body {
   justify-content: center;
 }
 
-/* Image fills circle cleanly */
 .icon-circle img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* CRITICAL */
+  object-fit: cover;      
   border-radius: 50%;
   display: block;
 }
 
 
-/* Navigation arrows */
 .chapter-arrow {
   position: absolute;
   top: 50%;
@@ -232,7 +221,6 @@ body {
 .chapter-arrow.right {
   right: 20px;
 }
-/* FULL-WIDTH TOPIC NAV */
 .chapter-nav {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* even spacing */
@@ -255,7 +243,6 @@ body {
   color: #ffffff;
   font-weight: 600;
 }
-/* ===== IMAGE-READY RIGHT SECTION ===== */
 
 .chapter-right {
   width: 60%;
@@ -265,13 +252,11 @@ body {
   position: relative;
 }
 
-/* Reserved image / illustration space (invisible for now) */
 .chapter-right::before {
   content: "";
   display: block;
-  height: 120px; /* space for future images */
+  height: 120px; 
 }
-/* HERO CANVAS (ANIMATED) */
 #heroCanvas {
   position: absolute;
   inset: 0;
@@ -280,7 +265,6 @@ body {
   z-index: 0;
 }
 
-/* STATIC BACKGROUND CANVAS */
 #staticCanvas {
   position: absolute;
   inset: 0;
@@ -289,7 +273,6 @@ body {
   z-index: 0;
 }
 
-/* Ensure content is above canvases */
 .hero-content,
 .chapter-content,
 .chapter-nav {
@@ -302,11 +285,9 @@ body {
   position: relative;
   overflow: hidden;
 }
-/* Disable mouse events on all canvases */
 canvas {
   pointer-events: none;
 }
-/* 🔥 CRITICAL: canvases must NEVER capture clicks */
 #heroCanvas,
 #staticCanvas {
   pointer-events: none;

@@ -1,12 +1,10 @@
 const header = document.getElementById("header");
 const user = JSON.parse(localStorage.getItem("ml_user"));
 
-// detect current page
 const isHomePage =
   window.location.pathname.endsWith("index.html") ||
   window.location.pathname === "/";
 
-// ---------- LOGGED IN ----------
 if (user && isHomePage) {
   header.innerHTML = `
     <header class="main-header">
@@ -31,7 +29,6 @@ if (user && isHomePage) {
     window.location.href = "index.html";
   });
 
-// ---------- LOGGED IN (NOT HOME) ----------
 } else if (user && !isHomePage) {
   header.innerHTML = `
     <header class="main-header">
@@ -47,7 +44,6 @@ if (user && isHomePage) {
     </header>
   `;
 
-// ---------- LOGGED OUT ----------
 } else {
   header.innerHTML = `
     <header class="main-header">

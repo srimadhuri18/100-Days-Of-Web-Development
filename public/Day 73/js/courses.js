@@ -1,4 +1,3 @@
-// Get enrolled courses or initialize
 const enrolledCourses =
   JSON.parse(localStorage.getItem("enrolled_courses")) || [];
 
@@ -27,5 +26,4 @@ function updateEnrollButtons() {
   });
 }
 
-// Run on page load
 document.addEventListener("DOMContentLoaded", updateEnrollButtons);

@@ -15,9 +15,7 @@ function login() {
     level: level.value
   };
 
-  // ✅ ONE CONSISTENT KEY
   localStorage.setItem("ml_user", JSON.stringify(user));
 
-  // redirect to home
   window.location.href = "index.html";
 }
