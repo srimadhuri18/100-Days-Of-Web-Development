@@ -1,6 +1,5 @@
 let dataChart;
 
-// Color schemes
 const chartColors = {
     vibrant: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
     pastel: ['#FFB3BA', '#BAFFC9', '#BAE1FF', '#FFFFBA'],
@@ -8,7 +7,6 @@ const chartColors = {
     earth: ['#795548', '#A1887F', '#BCAAA4']
 };
 
-// Datasets
 const datasets = {
     sales: {
         labels: ['Jan','Feb','Mar','Apr'],
@@ -48,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDataTable();
 });
 
-// ---------------- CHART ----------------
 
 function initializeChart() {
     const ctx = document.getElementById('data-chart').getContext('2d');
@@ -58,7 +55,6 @@ function initializeChart() {
 
     const currentData = datasets[datasetKey];
 
-    // 🔽 ADD THIS BLOCK HERE
     const MAX_VISIBLE = 200;
 
     const labels =
@@ -70,17 +66,16 @@ function initializeChart() {
         currentData.data.length > MAX_VISIBLE
             ? currentData.data.slice(0, MAX_VISIBLE)
             : currentData.data;
-    // 🔼 END ADDITION
 
     if (dataChart) dataChart.destroy();
 
     dataChart = new Chart(ctx, {
         type: chartType,
         data: {
-            labels: labels,        // 👈 USE THESE
+            labels: labels,       
             datasets: [{
                 label: 'Values',
-                data: data,        // 👈 USE THESE
+                data: data,        
                 backgroundColor: chartColors[scheme],
                 borderWidth: 2
             }]
@@ -93,7 +88,6 @@ function initializeChart() {
 }
 
 
-// ---------------- EVENTS ----------------
 
 function setupEventListeners() {
     document.getElementById('update-chart').addEventListener('click', () => {
@@ -132,7 +126,6 @@ function setupEventListeners() {
     document.getElementById('file-upload').addEventListener('change', handleUpload);
 }
 
-// ---------------- CSV UPLOAD ----------------
 
 function handleUpload(e) {
     const file = e.target.files[0];
@@ -154,12 +147,10 @@ function handleUpload(e) {
         const labels = [];
         const values = [];
 
-        // Detect header row
         let startIndex = 0;
         const firstRowCols = rows[0].split(',');
 
         if (isNaN(firstRowCols[1])) {
-            // Header detected → skip it
             startIndex = 1;
         }
 
@@ -181,7 +172,6 @@ function handleUpload(e) {
                 return;
             }
 
-            // If first column is numeric, still allow it
             labels.push(col1);
             values.push(num2);
         }
